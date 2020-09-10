@@ -2,6 +2,8 @@
   <div v-theme="'narrow'" id="single-blog">
     <h1>{{blog.title}}</h1>
     <article>{{blog.content}}</article>
+    <p>Author: {{blog.author}}</p>
+    <p>Colors: {{blog.colors.toString()}}</p>
   </div>
 </template>
 

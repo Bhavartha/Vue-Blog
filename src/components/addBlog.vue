@@ -20,9 +20,12 @@
           <label>Green</label>
           <input type="checkbox" value="green" v-model="blog.colors" />
         </div>
-        <select v-model="blog.author">
-          <option v-for="author in authors" :key="author">{{author}}</option>
-        </select>
+        <div>
+          Author:
+          <select v-model="blog.author">
+            <option v-for="author in authors" :key="author">{{author}}</option>
+          </select>
+        </div>
         <button @click.prevent="post">Submit</button>
       </form>
     </div>
@@ -48,10 +51,10 @@ export default {
       blog: {
         title: "",
         content: "",
-        author: "",
+        author: "Unknown",
         colors: [],
       },
-      authors: ["Uno", "Dos", "Tres"],
+      authors: ["Unknown", "Uno", "Dos", "Tres"],
       submitted: false,
     };
   },
@@ -61,8 +64,8 @@ export default {
         .collection("blogs")
         .add(this.blog)
         .then(() => {
-          console.log("Document successfully written!")
-          this.submitted = true
+          console.log("Document successfully written!");
+          this.submitted = true;
         })
         .catch((error) => {
           console.error("Error writing document: ", error);
@@ -116,5 +119,9 @@ h3 {
 
 select {
   width: 100px;
+  display: inline-block;
+}
+button{
+  margin: 20px 0px;
 }
 </style>
