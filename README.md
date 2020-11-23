@@ -1,4 +1,4 @@
-# net-ninja
+# [Vue Blog (static)](https://blog-sz.netlify.app/)
 
 ## Project setup
 ```
