@@ -1,4 +1,4 @@
-# [Vue Blog (static)](https://blog-sz.netlify.app/)
+# [Vue Blog](https://blog-sz.netlify.app/)
 
 ## Project setup
 ```
